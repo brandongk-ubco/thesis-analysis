@@ -1,26 +1,26 @@
-\begin{tabular}{llrr}
+\begin{tabular}{llrrr}
 \toprule
- & purpose & Baseline & Method \\
-dataset & metric &  &  \\
+ & purpose & Baseline & Method & Delta \\
+dataset & metric &  &  &  \\
 \midrule
-\multirow[t]{5}{*}{CIFAR10} & test_accuracy & 0.845700 & 0.861600 \\
- & test_confused & 0.131100 & 0.125400 \\
- & test_loss & 0.470954 & 0.504366 \\
- & test_realized & 0.827800 & 0.851900 \\
- & test_uncertain & 0.025700 & 0.014300 \\
-\cline{1-4}
-\multirow[t]{6}{*}{Cityscapes} & test_accuracy & 0.690006 & 0.756890 \\
- & test_confused & 0.061847 & 0.056079 \\
- & test_jaccard & 0.592972 & 0.660183 \\
- & test_loss & 0.301338 & 0.314262 \\
- & test_realized & 0.885136 & 0.886102 \\
- & test_uncertain & 0.000000 & 0.000000 \\
-\cline{1-4}
-\multirow[t]{5}{*}{DFire} & test_accuracy & 0.900372 & 0.922202 \\
- & test_confused & 0.082443 & 0.034835 \\
- & test_loss & 0.257001 & 0.243598 \\
- & test_realized & 0.882722 & 0.840223 \\
- & test_uncertain & 0.034835 & 0.000000 \\
-\cline{1-4}
+\multirow[t]{5}{*}{CIFAR10} & Accuracy & 0.846 & 0.862 & 0.016 \\
+ & Confused & 0.131 & 0.125 & -0.006 \\
+ & Loss & 0.471 & 0.504 & 0.033 \\
+ & Realized & 0.828 & 0.852 & 0.024 \\
+ & Uncertain & 0.026 & 0.014 & -0.011 \\
+\cline{1-5}
+\multirow[t]{6}{*}{Cityscapes} & Accuracy & 0.690 & 0.757 & 0.067 \\
+ & Confused & 0.062 & 0.056 & -0.006 \\
+ & Jaccard & 0.593 & 0.660 & 0.067 \\
+ & Loss & 0.301 & 0.314 & 0.013 \\
+ & Realized & 0.885 & 0.886 & 0.001 \\
+ & Uncertain & 0.000 & 0.000 & 0.000 \\
+\cline{1-5}
+\multirow[t]{5}{*}{DFire} & Accuracy & 0.900 & 0.922 & 0.022 \\
+ & Confused & 0.082 & 0.035 & -0.048 \\
+ & Loss & 0.257 & 0.244 & -0.013 \\
+ & Realized & 0.883 & 0.840 & -0.042 \\
+ & Uncertain & 0.035 & 0.000 & -0.035 \\
+\cline{1-5}
 \bottomrule
 \end{tabular}
