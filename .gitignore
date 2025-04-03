@@ -1,1 +1,4 @@
 series_data.csv
+.env
+.DS_Store
+.venv
