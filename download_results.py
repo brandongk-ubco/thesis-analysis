@@ -18,6 +18,8 @@ for i, run_id in enumerate(run_ids):
 
     training_metrics = specific_run.get_structure()["training"]
 
+    parameters = specific_run["parameters"].fetch()
+
     for metric in training_metrics:
         if 'FloatSeries' in str(type(training_metrics[metric])):
             series_data = specific_run["training"][metric].fetch_values()
@@ -26,6 +28,8 @@ for i, run_id in enumerate(run_ids):
             series_df['metric'] = metric
             series_df['run_id'] = run_id
             series_df['tags'] = [list(tags.copy()) for _ in range(len(series_df))]
+            for param in parameters:
+                series_df[param] = parameters[param]
             for hparam, hparam_value in specific_run["training"]["hyperparams"].fetch().items():
                 series_df[hparam] = hparam_value
             all_series_data.append(series_df)
